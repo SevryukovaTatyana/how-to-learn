@@ -15,7 +15,6 @@
   max-height: 756px;
   background-color: #f2f2f2;
   position: relative;
-  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 .logo {
@@ -61,7 +60,6 @@
   height: 608px;
   bottom: 0;
   right: 0;
-  padding: auto;
   z-index: 1;
 }
 .header__square-pic {
@@ -89,7 +87,6 @@
   font-size: 18px;
   font-weight: 400;
   color: #2f80ed;
-  min-height: 0,2;
 }
 .two-columns__main-text{
   width: 80%;
@@ -131,8 +128,6 @@
   justify-content: space-between;
   width: 1100px;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   z-index: 2;
 }
 .table__cell {
@@ -149,22 +144,26 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 20px 0;
+  margin-bottom: 20px;
 }
 /**/
 .feynman{
-  margin-top:100;
+  margin-top:100px;
   background-color: #f2f2f2;
-  height: 890px;
+  min-height: 890px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
 }
 .feynman__title{
   width: 648px;
   color: #000;
   text-align: center;
-  margin: auto;
+  margin: 0;
   padding-top: 100px;
-  z-index: 2;
+  z-index: 3;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 700;
@@ -173,12 +172,12 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: 400;
-  z-index: 2;
+  z-index: 3;
   color: black;
   margin-top: 70px;
   text-align: center;
 }
-.feyman__link{
+.feynman__link{
   position: absolute;
   line-height: 51px;
   font-size: 36px;
@@ -187,7 +186,7 @@
   top: 50%;
   right: 48px;
 }
-.feyman__main-illustration{
+.feynman__foto{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -199,12 +198,14 @@
 /**/
 .kaufman{
   background-color: #1f1f1f;
-  padding: 90px auto;
-  margin-bottom: -20px;
+  padding: 90px 0;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  flex-wrap: wrap;
 }
 .section-title_theme_dark{
   color: #ffffff;
@@ -223,6 +224,7 @@
   width: 200px; /*данное свойство не сработало на моем компе, по этому я поставила доп класс cell*/
 }
 .cell{
+  margin:0;
   width: 200px; /*cell должен стоять выше, но для наглядность поместила сюда*/
 }
 .kaufman_triangle{
@@ -231,66 +233,86 @@
   z-index: 1;
   background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
-  left: 1910px;
+  right:-210px;
+
 }
 .footer{
   background-color: #1f1f1f;
   min-height: 350px;
   color: white;
   padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
 }
 .footer__columns{
   display: flex;
-  justify-content: space-between;
-  width: 90%;
-  flex-basis: 711px;
   box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
 }
 .footer__column_content_copyright{
+  display: flex;
   flex-direction: column;
-  margin-left: 70px;
+  justify-content: space-between;
+  flex-basis: 711px;
+  align-self: stretch;
 }
 .logo_place_footer{
   background-image: url(../images/logo_place_footer.svg);
   width: 228px;
   height: 32px;
-  margin-left: 0;
-  margin-top: 0;
+  margin-left:0;
 }
 .footer__author{
   color: white;
   line-height: 25px;
-  margin-top: 100%;
-  padding-left: 18px;
+  margin: 18px 0;
   font-size: 18px;
+  font-weight: 400;
 }
-.footer__column{
-  flex-direction: column;
-}
+
 .footer__column-heading{
   color: white;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
 }
+.footer__column_content_social{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
 .footer__column-links{
   color: white;
-  margin: 16px auto;
+  margin: 0;
   line-height: 30px;
   font-weight: 400;
   font-size: 18px;
-  height:100px;
-  width: 120px;
+  text-decoration: none;
+}
+.footer__column_content_info{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
 }
 .footer__social-icon{
-  size: 16px 16px;
-  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  padding-right: 10px;
 }
 .footer__column-link{
   color: white;
   font-size: 18px;
   line-height: 30px;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 400;
 }
 
