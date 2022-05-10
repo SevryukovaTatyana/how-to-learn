@@ -15,44 +15,43 @@
   max-height: 756px;
   background-color: #f2f2f2;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 64px;
   /* выше установили ограничения для секции */
 }
 .logo {
   width: 228px;
   height: 32px;
-  color: black;
-  margin: 30px auto auto 64px;
 }
 .logo_place_header {
   position: absolute;
   z-index: 1;
+  top: 30px;
 }
 .header__title {
-  display: flex;
-  width: 730px;
+  max-width: 730px;
   line-height: 96px;
-  margin-left: 64px;
-  padding-top: 300px;
+  margin: 0;
   color: #000;
   font-size: 102px;
   font-weight: 700;
   z-index: 1;
-  flex-direction: column;
-  justify-content: center;
 }
 .header__subtitle {
   position: absolute;
-  display: block;
   line-height: 25px;
   font-size: 18px;
   font-weight: 400;
+  margin: 0;
   z-index: 1;
-  width: 388px;
+  max-width: 388px;
   bottom: 30px;
   left: 64px;
 }
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 .header__main-illustration {
   position: absolute;
@@ -61,6 +60,7 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+  object-fit: cover; /*добавила по замечаниям ревью*/
 }
 .header__square-pic {
   position: absolute;
@@ -73,15 +73,18 @@
 }
 /**/
 .description{
-  margin: 100px auto 0;
+  margin: 100px auto;
   min-width: 784px;
   width: 80%;
 }
 .two-columns {
   display: flex;
   justify-content: space-between;
+
 }
 .two-columns__brief{
+  padding-top: 25px; /*сбросила марджин по замечанию ревью м пришлось добавить паддинг, т.к. заголовок оказался выше текста и я не смогла выровнять другими свойствами*/
+  margin: 0;
   width: 175px;
   line-height: 1.2;
   font-size: 18px;
@@ -89,6 +92,7 @@
   color: #2f80ed;
 }
 .two-columns__main-text{
+  margin: 0;
   width: 80%;
   min-width: 784px;
   line-height: 34px;
@@ -148,7 +152,7 @@
 }
 /**/
 .feynman{
-  margin-top:100px;
+  padding-top:100px;
   background-color: #f2f2f2;
   min-height: 890px;
   display: flex;
@@ -162,7 +166,6 @@
   color: #000;
   text-align: center;
   margin: 0;
-  padding-top: 100px;
   z-index: 3;
   line-height: 1.15;
   font-size: 120px;
@@ -185,6 +188,7 @@
   color: #2f80ed;
   top: 50%;
   right: 48px;
+  text-decoration: none;
 }
 .feynman__foto{
   position: absolute;
@@ -198,49 +202,48 @@
 /**/
 .kaufman{
   background-color: #1f1f1f;
-  padding: 90px 0;
+  padding: 90px auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   position: relative;
-  flex-wrap: wrap;
 }
 .section-title_theme_dark{
   color: #ffffff;
-  padding-top: 90px; /* свойства не сработали на блок кауфман, пришлось прописывать отдельно */
+  padding-bottom: 20px;
+  padding-top: 90px;
 }
 .section-subtitle_theme_dark{
   color: #ffffff;
 }
 .table_theme_dark{
   color: #ffffff;
-  margin: 90px auto;
+  padding: 80px auto;
 }
 
 .table__cell_theme_dark{
   color: #ffffff;
-  width: 200px; /*данное свойство не сработало на моем компе, по этому я поставила доп класс cell*/
+  width: 200px;
 }
-.cell{
-  margin:0;
-  width: 200px; /*cell должен стоять выше, но для наглядность поместила сюда*/
-}
-.kaufman_triangle{
+
+.kaufman__triangle{
   height: 877px;
   width: 877px;
   z-index: 1;
   background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
   right:-210px;
+  top: 0;
+  object-fit: none; /*добавила по замечаниям ревью*/
 
 }
 .footer{
   background-color: #1f1f1f;
   min-height: 350px;
   color: white;
-  padding: 60px 0 40px 0;
+  padding: 60px 0 40px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
@@ -250,7 +253,6 @@
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: space-between;
-  flex-direction: row;
   width: 90%;
 }
 .footer__column_content_copyright{
@@ -262,7 +264,6 @@
 }
 .logo_place_footer{
   background-image: url(../images/logo_place_footer.svg);
-  width: 228px;
   height: 32px;
   margin-left:0;
 }
