@@ -136,6 +136,7 @@
   list-style-type: none;
   z-index: 2;
   margin: 0;
+  padding: 0;
 }
 .table__cell {
   width: 250px;
@@ -241,7 +242,7 @@
   right:-210px;
   top: 0;
   object-fit: scale-down; /*добавила по замечаниям ревью*/
-
+  background-size: cover;
 }
 .footer{
   background-color: #1f1f1f;
@@ -300,6 +301,7 @@
 .footer__column-links{
   color: white;
   margin: 0;
+  padding: 0;
   line-height: 30px;
   font-weight: 400;
   font-size: 18px;
@@ -328,4 +330,4 @@
   margin: 0;
   font-weight: 400;
 }
-
+/*очень сложно мне далось понимание необходимости отступов, но вроде осилила) надеюсь все исправила*/
