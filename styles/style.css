@@ -61,7 +61,7 @@
   bottom: 0;
   right: 0;
   z-index: 1;
-  object-fit: cover; /*добавила по замечаниям ревью*/
+  object-fit: fill;
 }
 .header__square-pic {
   position: absolute;
@@ -101,6 +101,9 @@
 .two-columns__paragraph{
   margin: 0;
   padding-bottom: 30px;
+}
+.two-columns__paragraph:last-child {
+  padding-bottom:  0;
 }
 .two-columns__span-accent{
   font-weight: 700;
@@ -157,7 +160,7 @@
 }
 /**/
 .feynman{
-  box-sizing:border-box; /*добавила по ревью. спасибо, я не подумала об этом*/
+  box-sizing:border-box;
   margin: 0;
   padding-top:100px;
   background-color: #f2f2f2;
@@ -219,6 +222,7 @@
 }
 .section-title_theme_dark{
   color: #ffffff;
+  z-index: 2;
 }
 .section-subtitle_theme_dark{
   color: #ffffff;
@@ -241,7 +245,7 @@
   position: absolute;
   right:-210px;
   top: 0;
-  object-fit: scale-down; /*добавила по замечаниям ревью*/
+  object-fit: scale-down;
   background-size: cover;
 }
 .footer{
@@ -261,15 +265,15 @@
   width: 90%;
 }
 .footer__column{
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 .footer__column_content_copyright{
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
   align-self: stretch;
-  margin: 0;
+
 }
 .logo_place_footer{
   background-image: url(../images/logo_place_footer.svg);
@@ -292,11 +296,8 @@
   font-weight: 700;
 }
 .footer__column_content_social{
-  color: white;
-  display: flex;
-  flex-direction: column;
   padding-bottom: 16px;
-  margin: 0;
+
 }
 .footer__column-links{
   color: white;
@@ -310,11 +311,7 @@
 
 }
 .footer__column_content_info{
-  color: white;
-  display: flex;
-  flex-direction: column;
   padding-bottom: 16px;
-  margin: 0;
 }
 .footer__social-icon{
   vertical-align: baseline;
@@ -330,4 +327,4 @@
   margin: 0;
   font-weight: 400;
 }
-/*очень сложно мне далось понимание необходимости отступов, но вроде осилила) надеюсь все исправила*/
+
