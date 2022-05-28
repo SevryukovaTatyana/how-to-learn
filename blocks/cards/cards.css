@@ -1,0 +1,9 @@
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px); /*ширину взяла сложив показатели из брифа*/
+  grid-column-gap: 100px;
+  list-style-type: none;
+  width: 920px;
+  margin: 0;
+  padding: 0;
+}

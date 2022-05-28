@@ -1,0 +1,10 @@
+
+.video__iframes{
+  margin: 50px auto -150px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.video__iframe:last-child{
+ margin-left: 20px;
+}
